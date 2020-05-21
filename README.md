@@ -55,7 +55,7 @@ jqueryのスリムビルド版はajaxが使えないためです。
 ### demo/index.htmlをローカルでそのまま開いた状態(URLがfile://とかになっている状態)だと、CORSにひっかかってうまく動作しない
 本番環境に思い切って投げちゃうか、それでも不安ならローカルに開発サーバを立てましょう。  
 例えば、お使いのPCにpythonが入ってるなら、ターミナルを立ち上げて、適切なディレクトリまで移動して、`python -m http.server`をすると、簡易開発サーバが立ちます。  
-その状態で、ブラウザのURL蘭に`localhost:8000/index.html`を入力すれば、さっき立てた簡易開発サーバ経由で色々動かせます。
+その状態で、ブラウザのURL欄に`localhost:8000/index.html`を入力すれば、さっき立てた簡易開発サーバ経由で色々動かせます。
 
 ### 一つのページにフォームを複数用意したい、または、別のページで同じスクリプトを参照したい(フォームAの答えワードがフォームBの解答に反応しないようにしたい)
 例えば、formにname属性を足して(`<form onsubmit="AnswerCheck(this);return false;" name="hogehoge">`)、探しにいく場所を`"answers/"+send_text`から`"answers/"+form.name+"/"+send_text`すると、"answer/hogehoge/{入力ワード}"を探すようになります。  
