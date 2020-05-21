@@ -1,0 +1,48 @@
+input, button, textarea, select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type=text]{
+  font-size: 14px;
+  height: 28px;
+  width: 200px;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+input[type=text]:focus{
+  border: 1px solid #5588a3;
+}
+
+button[type=submit]{
+  font-size: 14px;
+  color: #ffffff;
+  width: 40px;
+  height: 30px;
+  background-color: #145374;
+  border: 1px solid #145374;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button[type=submit]:hover{
+  color: #145374;
+  background-color: #ffffff;
+}
+
+#result{
+  font-size: 12px;
+}
