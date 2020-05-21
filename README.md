@@ -79,5 +79,8 @@ jqueryのスリムビルド版はajaxが使えないためです。
 ### formのonsubmit="AnswerCheck(this);return false;"って何
 スクリプトで定義しているAnswerCheck()にthis(ここではform自身)を渡したあと、元々のsubmitの動作(今のURLにformの内容を送る)をキャンセルしています。(AnswerCheckで送信処理をしているので、改めてsubmit側で送られてしまうと困るため)
 
-### formのonsubmitじゃなくて、buttonにonclick="AnswerCheck(this)"をつけてもいいのでは？
+### formにonsubmitじゃなくて、buttonにonclick="AnswerCheck(this)"をつけてもいいのでは？
 もちろんそれでもいいです。submitに紐づけると、Enterで反応させられて便利だなと思っただけです。
+
+## 改善点・バグ報告
+なんか変なところ等あれば、何経由でもよいのでどしどしください
