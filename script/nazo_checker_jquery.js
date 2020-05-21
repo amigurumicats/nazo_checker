@@ -6,8 +6,6 @@ function AnswerCheck(form){
     $("#result").text("入力欄が空です");
     return false;
   }
-  // DEBUG
-  console.log("送信 : "+send_text);
 
   $.ajax({
     url: "answers/"+send_text,

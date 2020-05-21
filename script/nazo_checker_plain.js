@@ -6,8 +6,6 @@ function AnswerCheck(form){
     result.innerHTML = "入力欄が空です";
     return false;
   }
-  // DEBUG
-  console.log("送信 : "+send_text);
 
   // XMLHttpRequestオブジェクトを生成する
   var req = new XMLHttpRequest();
@@ -27,12 +25,12 @@ function AnswerCheck(form){
       }
     }else{
       // answers/{send_text}が存在しない
-      let result = document.getElementById('result');
+      let result = document.getElementById("result");
       result.innerHTML = "「"+send_text+"」は不正解です";
     }
   })
 
-  req.open('GET', 'answers/'+send_text, true);
+  req.open("GET", "answers/"+send_text, true);
   // 送信
   req.send();
 
