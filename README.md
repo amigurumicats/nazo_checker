@@ -23,7 +23,7 @@ jqueryを使う版(nazo_checker_jquery.js)と、jqueryに依存しない版(nazo
 ```
 
 4. 何かが起こってほしいワードごとに、ファイル名をそのワードとするファイル(答えワードファイル)を作る  
-各答えワードは以下のような形式にしてください(ちなみに、以下のようなデータ形式をJSONといいます)。
+各答えワードファイルは以下のような形式にしてください(ちなみに、以下のようなデータ形式をJSONといいます)。
 ```
 {
   "type": "alert" または "message",
@@ -61,10 +61,11 @@ jqueryのスリムビルド版はajaxが使えないためです。
 その状態で、ブラウザのURL欄に`localhost:8000/index.html`を入力すれば、さっき立てた簡易開発サーバ経由で色々動かせます。
 
 ### 一つのページにフォームを複数用意したい、または、別のページで同じスクリプトを参照したい(フォームAの答えワードがフォームBの解答に反応しないようにしたい)
-例えば、formにname属性を足して(`<form onsubmit="AnswerCheck(this);return false;" name="hogehoge">`)、探しにいく場所を`"answers/"+send_text`から`"answers/"+form.name+"/"+send_text`すると、"answer/hogehoge/{入力ワード}"を探すようになります。  
-このとき、答えワードはそれぞれ対応した場所(`answers/hogehoge/`や`answers/fugafuga`)に置くようにしましょう。  
+例えば、formにname属性を足して(`<form onsubmit="AnswerCheck(this);return false;" name="hogehoge">`)、探しにいく場所を`"answers/"+send_text`から`"answers/"+form.name+"/"+send_text`すると、"answers/hogehoge/{入力ワード}"を探すようになります。  
+このとき、答えワードはそれぞれ対応した場所(`answers/hogehoge/`や`answers/fugafuga/`)に置くようにしましょう。  
 答えワードに対してフォルダが増えすぎて大変！というときは、`"answers/"+form.name+"_"+send_text`とすると、同じフォルダでも接頭辞によってファイルの棲み分けができます。  
-ただし、このときは答えワードファイルも対応する接頭辞(上の例なら"hogehoge_"をつけましょう。例えば、元の答えワードが"ねこ"なら、"hogehoge_ねこ"というファイルを`answers/`に置きましょう。)をつけなければいけません。  
+ただし、このときは答えワードファイルも対応する接頭辞をつけなければいけません。  
+(上の例なら"hogehoge_"をつけることになります。例えば、元の答えワードが"ねこ"なら、"hogehoge_ねこ"というファイルを`answers/`に置きましょう。)  
 探しに行くパスは文字列を適当に切ったり貼ったりしているだけなので、フォルダ名をanswersじゃなくすることもできます。
 
 ### 日本語を含むファイルが作れない（fc2とか)
