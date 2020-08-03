@@ -1,5 +1,5 @@
 {
-  "type": "alert",
-  "value": "ぼくはあらーと！",
-  "comment": "あらーと"
+    "type": "alert",
+    "value": "ぼくはあらーと！",
+    "comment": "あらーと"
 }
