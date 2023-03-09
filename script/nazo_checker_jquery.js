@@ -13,6 +13,7 @@ function AnswerCheck(form){
             type: "GET",
             dataType: "json",
             timeout: 3000,
+            cache: false,
         })
         .done(function(resp){
             // answers/{send_text}が存在する
